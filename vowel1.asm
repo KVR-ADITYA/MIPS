@@ -1,3 +1,7 @@
+     .data
+str:    .space 82
+prompt: .asciiz "Input a string:\n"
+ 
  .text
     .globl  main
 
@@ -58,6 +62,3 @@ done:
     syscall
     nop
 
-    .data
-str:    .space 82
-prompt: .asciiz "Input a string:\n"
