@@ -1,0 +1,807 @@
+cclab@cclab-OptiPlex-3060:~$ sudo su
+[sudo] password for cclab: 
+root@cclab-OptiPlex-3060:/home/cclab# exit
+exit
+cclab@cclab-OptiPlex-3060:~$ vim
+The program 'vim' can be found in the following packages:
+ * vim
+ * vim-gnome
+ * vim-tiny
+ * vim-athena
+ * vim-athena-py2
+ * vim-gnome-py2
+ * vim-gtk
+ * vim-gtk-py2
+ * vim-gtk3
+ * vim-gtk3-py2
+ * vim-nox
+ * vim-nox-py2
+Try: sudo apt install <selected package>
+cclab@cclab-OptiPlex-3060:~$ sudo apt-get install vim
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  apt-clone archdetect-deb dmeventd dmraid gir1.2-clutter-1.0
+  gir1.2-clutter-gst-3.0 gir1.2-cogl-1.0 gir1.2-coglpango-1.0
+  gir1.2-gtkclutter-1.0 gir1.2-networkmanager-1.0 gir1.2-nma-1.0
+  gir1.2-timezonemap-1.0 gir1.2-xkl-1.0 kpartx kpartx-boot
+  libdebian-installer4 libdevmapper-event1.02.1 libdmraid1.0.0.rc16
+  liblvm2app2.2 liblvm2cmd2.02 libparted-fs-resize0 libreadline5
+  linux-signed-image-generic-hwe-16.04 linux-signed-image-oem lvm2 python3-icu
+  python3-pam rdate
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  vim-runtime
+Suggested packages:
+  ctags vim-doc vim-scripts vim-gnome-py2 | vim-gtk-py2 | vim-gtk3-py2
+  | vim-athena-py2 | vim-nox-py2
+The following NEW packages will be installed:
+  vim vim-runtime
+0 upgraded, 2 newly installed, 0 to remove and 255 not upgraded.
+Need to get 6,214 kB of archives.
+After this operation, 30.0 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+0% [Working]^C
+cclab@cclab-OptiPlex-3060:~$ apt-get install vim
+E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?
+cclab@cclab-OptiPlex-3060:~$ ls
+0242     B.class    examples.desktop  j2.asm  mips1.3.asm  Pictures
+abc.txt  Desktop    firstProg.class   j2.c    mips1.asm    Public
+A.class  Documents  firstProg.java    j3.asm  Music        Templates
+A.java   Downloads  j1.asm            j.asm   null         Videos
+cclab@cclab-OptiPlex-3060:~$ la
+0242           Desktop           .ICEauthority  Pictures
+abc.txt        .dmrc             j1.asm         .pki
+A.class        Documents         j2.asm         .profile
+A.java         Downloads         j2.c           Public
+.bash_history  examples.desktop  j3.asm         .sudo_as_admin_successful
+.bash_logout   .file.swp         j.asm          Templates
+.bashrc        firstProg.class   .local         Videos
+B.class        firstProg.java    mips1.3.asm    .Xauthority
+.cache         .gconf            mips1.asm      .xsession-errors
+.compiz        .gnome            Music          .xsession-errors.old
+.config        .gnupg            null
+cclab@cclab-OptiPlex-3060:~$ la -a
+.              .config           .ICEauthority  .pki
+..             Desktop           j1.asm         .profile
+0242           .dmrc             j2.asm         Public
+abc.txt        Documents         j2.c           .sudo_as_admin_successful
+A.class        Downloads         j3.asm         Templates
+A.java         examples.desktop  j.asm          Videos
+.bash_history  .file.swp         .local         .Xauthority
+.bash_logout   firstProg.class   mips1.3.asm    .xsession-errors
+.bashrc        firstProg.java    mips1.asm      .xsession-errors.old
+B.class        .gconf            Music
+.cache         .gnome            null
+.compiz        .gnupg            Pictures
+cclab@cclab-OptiPlex-3060:~$ alias la
+alias la='ls -A'
+cclab@cclab-OptiPlex-3060:~$ l
+0242/    B.class     examples.desktop  j2.asm  mips1.3.asm  Pictures/
+abc.txt  Desktop/    firstProg.class   j2.c    mips1.asm    Public/
+A.class  Documents/  firstProg.java    j3.asm  Music/       Templates/
+A.java   Downloads/  j1.asm            j.asm   null         Videos/
+cclab@cclab-OptiPlex-3060:~$ alias l
+alias l='ls -CF'
+cclab@cclab-OptiPlex-3060:~$ cat newfile.txt
+cat: newfile.txt: No such file or directory
+cclab@cclab-OptiPlex-3060:~$ ls
+0242     B.class    examples.desktop  j2.asm  mips1.3.asm  Pictures
+abc.txt  Desktop    firstProg.class   j2.c    mips1.asm    Public
+A.class  Documents  firstProg.java    j3.asm  Music        Templates
+A.java   Downloads  j1.asm            j.asm   null         Videos
+cclab@cclab-OptiPlex-3060:~$ cat abc.txt
+.text
+main:
+     li $a0,10
+     li $v0,1
+     syscall
+cclab@cclab-OptiPlex-3060:~$ mkdir new_directory
+cclab@cclab-OptiPlex-3060:~$ cd new_directory
+cclab@cclab-OptiPlex-3060:~/new_directory$ ls
+cclab@cclab-OptiPlex-3060:~/new_directory$ rm -r new_directory
+rm: cannot remove 'new_directory': No such file or directory
+cclab@cclab-OptiPlex-3060:~/new_directory$ cd ..
+cclab@cclab-OptiPlex-3060:~$ rm -r new_directory
+cclab@cclab-OptiPlex-3060:~$ cd new_directory
+bash: cd: new_directory: No such file or directory
+cclab@cclab-OptiPlex-3060:~$ ps
+  PID TTY          TIME CMD
+ 8612 pts/2    00:00:00 bash
+ 8673 pts/2    00:00:00 ps
+cclab@cclab-OptiPlex-3060:~$ ps ef
+  PID TTY      STAT   TIME COMMAND
+ 8612 pts/2    Ss     0:00 bash XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Se
+ 8674 pts/2    R+     0:00  \_ ps ef XDG_VTNR=7 XDG_SESSION_ID=c2 CLUTTER_IM_MOD
+cclab@cclab-OptiPlex-3060:~$ 
+cclab@cclab-OptiPlex-3060:~$ ps -ef
+UID        PID  PPID  C STIME TTY          TIME CMD
+root         1     0  0 Aug13 ?        00:00:01 /sbin/init splash
+root         2     0  0 Aug13 ?        00:00:00 [kthreadd]
+root         4     2  0 Aug13 ?        00:00:00 [kworker/0:0H]
+root         6     2  0 Aug13 ?        00:00:00 [mm_percpu_wq]
+root         7     2  0 Aug13 ?        00:00:00 [ksoftirqd/0]
+root         8     2  0 Aug13 ?        00:00:02 [rcu_sched]
+root         9     2  0 Aug13 ?        00:00:00 [rcu_bh]
+root        10     2  0 Aug13 ?        00:00:00 [migration/0]
+root        11     2  0 Aug13 ?        00:00:00 [watchdog/0]
+root        12     2  0 Aug13 ?        00:00:00 [cpuhp/0]
+root        13     2  0 Aug13 ?        00:00:00 [cpuhp/1]
+root        14     2  0 Aug13 ?        00:00:00 [watchdog/1]
+root        15     2  0 Aug13 ?        00:00:00 [migration/1]
+root        16     2  0 Aug13 ?        00:00:00 [ksoftirqd/1]
+root        18     2  0 Aug13 ?        00:00:00 [kworker/1:0H]
+root        19     2  0 Aug13 ?        00:00:00 [cpuhp/2]
+root        20     2  0 Aug13 ?        00:00:00 [watchdog/2]
+root        21     2  0 Aug13 ?        00:00:00 [migration/2]
+root        22     2  0 Aug13 ?        00:00:00 [ksoftirqd/2]
+root        24     2  0 Aug13 ?        00:00:00 [kworker/2:0H]
+root        25     2  0 Aug13 ?        00:00:00 [cpuhp/3]
+root        26     2  0 Aug13 ?        00:00:00 [watchdog/3]
+root        27     2  0 Aug13 ?        00:00:00 [migration/3]
+root        28     2  0 Aug13 ?        00:00:00 [ksoftirqd/3]
+root        30     2  0 Aug13 ?        00:00:00 [kworker/3:0H]
+root        31     2  0 Aug13 ?        00:00:00 [cpuhp/4]
+root        32     2  0 Aug13 ?        00:00:00 [watchdog/4]
+root        33     2  0 Aug13 ?        00:00:00 [migration/4]
+root        34     2  0 Aug13 ?        00:00:00 [ksoftirqd/4]
+root        36     2  0 Aug13 ?        00:00:00 [kworker/4:0H]
+root        37     2  0 Aug13 ?        00:00:00 [cpuhp/5]
+root        38     2  0 Aug13 ?        00:00:00 [watchdog/5]
+root        39     2  0 Aug13 ?        00:00:00 [migration/5]
+root        40     2  0 Aug13 ?        00:00:00 [ksoftirqd/5]
+root        42     2  0 Aug13 ?        00:00:00 [kworker/5:0H]
+root        43     2  0 Aug13 ?        00:00:00 [kdevtmpfs]
+root        44     2  0 Aug13 ?        00:00:00 [netns]
+root        45     2  0 Aug13 ?        00:00:00 [rcu_tasks_kthre]
+root        46     2  0 Aug13 ?        00:00:00 [kauditd]
+root        49     2  0 Aug13 ?        00:00:00 [khungtaskd]
+root        50     2  0 Aug13 ?        00:00:00 [oom_reaper]
+root        51     2  0 Aug13 ?        00:00:00 [writeback]
+root        52     2  0 Aug13 ?        00:00:00 [kcompactd0]
+root        53     2  0 Aug13 ?        00:00:00 [ksmd]
+root        54     2  0 Aug13 ?        00:00:00 [khugepaged]
+root        55     2  0 Aug13 ?        00:00:00 [crypto]
+root        56     2  0 Aug13 ?        00:00:00 [kintegrityd]
+root        57     2  0 Aug13 ?        00:00:00 [kblockd]
+root        62     2  0 Aug13 ?        00:00:00 [ata_sff]
+root        63     2  0 Aug13 ?        00:00:00 [md]
+root        64     2  0 Aug13 ?        00:00:00 [edac-poller]
+root        65     2  0 Aug13 ?        00:00:00 [devfreq_wq]
+root        66     2  0 Aug13 ?        00:00:00 [watchdogd]
+root        69     2  0 Aug13 ?        00:00:00 [kswapd0]
+root        70     2  0 Aug13 ?        00:00:00 [kworker/u13:0]
+root        71     2  0 Aug13 ?        00:00:00 [ecryptfs-kthrea]
+root       113     2  0 Aug13 ?        00:00:00 [kthrotld]
+root       114     2  0 Aug13 ?        00:00:00 [acpi_thermal_pm]
+root       118     2  0 Aug13 ?        00:00:00 [ipv6_addrconf]
+root       127     2  0 Aug13 ?        00:00:00 [kstrp]
+root       148     2  0 Aug13 ?        00:00:00 [charger_manager]
+root       197     2  0 Aug13 ?        00:00:00 [scsi_eh_0]
+root       198     2  0 Aug13 ?        00:00:00 [scsi_tmf_0]
+root       199     2  0 Aug13 ?        00:00:00 [scsi_eh_1]
+root       200     2  0 Aug13 ?        00:00:00 [scsi_tmf_1]
+root       201     2  0 Aug13 ?        00:00:00 [scsi_eh_2]
+root       202     2  0 Aug13 ?        00:00:00 [scsi_tmf_2]
+root       203     2  0 Aug13 ?        00:00:00 [scsi_eh_3]
+root       204     2  0 Aug13 ?        00:00:00 [scsi_tmf_3]
+root       205     2  0 Aug13 ?        00:00:00 [scsi_eh_4]
+root       206     2  0 Aug13 ?        00:00:00 [scsi_tmf_4]
+root       210     2  0 Aug13 ?        00:00:02 [i915/signal:0]
+root       211     2  0 Aug13 ?        00:00:00 [i915/signal:1]
+root       212     2  0 Aug13 ?        00:00:00 [i915/signal:2]
+root       213     2  0 Aug13 ?        00:00:00 [i915/signal:4]
+root       218     2  0 Aug13 ?        00:00:00 [kworker/5:1H]
+root       321     2  0 Aug13 ?        00:00:00 [jbd2/sda3-8]
+root       322     2  0 Aug13 ?        00:00:00 [ext4-rsv-conver]
+root       357     1  0 Aug13 ?        00:00:00 /lib/systemd/systemd-journald
+root       373     2  0 Aug13 ?        00:00:00 [kworker/0:1H]
+root       379     1  0 Aug13 ?        00:00:00 /sbin/lvmetad -f
+root       390     2  0 Aug13 ?        00:00:00 [kworker/1:1H]
+root       394     1  0 Aug13 ?        00:00:00 /lib/systemd/systemd-udevd
+root       463     2  0 Aug13 ?        00:00:00 [kworker/2:1H]
+root       560     2  0 Aug13 ?        00:00:00 [kworker/4:1H]
+root       714     2  0 Aug13 ?        00:00:00 [kworker/3:1H]
+systemd+   807     1  0 Aug13 ?        00:00:00 /lib/systemd/systemd-timesyncd
+root       830     1  0 Aug13 ?        00:00:00 /lib/systemd/systemd-logind
+root       831     1  0 Aug13 ?        00:00:00 /usr/sbin/ModemManager
+root       832     1  0 Aug13 ?        00:00:00 /usr/sbin/acpid
+avahi      834     1  0 Aug13 ?        00:00:01 avahi-daemon: running [cclab-Opt
+root       838     1  0 Aug13 ?        00:00:00 /usr/lib/accountsservice/account
+message+   841     1  0 Aug13 ?        00:00:00 /usr/bin/dbus-daemon --system --
+avahi      875   834  0 Aug13 ?        00:00:00 avahi-daemon: chroot helper
+root       876     1  0 Aug13 ?        00:00:00 /usr/sbin/NetworkManager --no-da
+syslog     877     1  0 Aug13 ?        00:00:00 /usr/sbin/rsyslogd -n
+root       878     1  0 Aug13 ?        00:00:00 /usr/sbin/thermald --no-daemon -
+root       885     1  0 Aug13 ?        00:00:00 /usr/sbin/cron -f
+root       989     1  0 Aug13 ?        00:00:00 /usr/sbin/lightdm
+root       991     1  0 Aug13 ?        00:00:00 /usr/sbin/irqbalance --pid=/var/
+root      1002     1  0 Aug13 ?        00:00:00 /usr/lib/policykit-1/polkitd --n
+root      1021   989  0 Aug13 tty7     00:02:20 /usr/lib/xorg/Xorg -core :0 -sea
+root      1038     1  0 Aug13 ?        00:00:00 /usr/sbin/sshd -D
+rtkit     1192     1  0 Aug13 ?        00:00:00 /usr/lib/rtkit/rtkit-daemon
+nobody    1220   876  0 Aug13 ?        00:00:00 /usr/sbin/dnsmasq --no-resolv --
+root      1256     1  0 Aug13 ?        00:00:00 /usr/lib/upower/upowerd
+colord    1309     1  0 Aug13 ?        00:00:00 /usr/lib/colord/colord
+whoopsie  1327     1  0 Aug13 ?        00:00:00 /usr/bin/whoopsie -f
+root      1332     1  0 Aug13 tty1     00:00:00 /sbin/agetty --noclear tty1 linu
+root      1484   989  0 Aug13 ?        00:00:00 lightdm --session-child 12 21
+cclab     1501     1  0 Aug13 ?        00:00:00 /lib/systemd/systemd --user
+cclab     1502  1501  0 Aug13 ?        00:00:00 (sd-pam)
+cclab     1507     1  0 Aug13 ?        00:00:00 /usr/bin/gnome-keyring-daemon --
+cclab     1509  1484  0 Aug13 ?        00:00:00 /sbin/upstart --user
+cclab     1588  1509  0 Aug13 ?        00:00:00 upstart-udev-bridge --daemon --u
+cclab     1596  1509  0 Aug13 ?        00:00:02 dbus-daemon --fork --session --a
+cclab     1608  1509  0 Aug13 ?        00:00:00 /usr/lib/x86_64-linux-gnu/hud/wi
+cclab     1635  1509  0 Aug13 ?        00:00:00 upstart-dbus-bridge --daemon --s
+cclab     1637  1509  0 Aug13 ?        00:00:00 upstart-dbus-bridge --daemon --s
+cclab     1640  1509  0 Aug13 ?        00:00:00 upstart-file-bridge --daemon --u
+cclab     1641  1509  0 Aug13 ?        00:00:19 /usr/bin/ibus-daemon --daemonize
+cclab     1658  1509  0 Aug13 ?        00:00:00 /usr/lib/gvfs/gvfsd
+cclab     1663  1509  0 Aug13 ?        00:00:00 /usr/lib/gvfs/gvfsd-fuse /run/us
+cclab     1666  1641  0 Aug13 ?        00:00:00 /usr/lib/ibus/ibus-dconf
+cclab     1670  1641  0 Aug13 ?        00:00:03 /usr/lib/ibus/ibus-ui-gtk3
+cclab     1674  1509  0 Aug13 ?        00:00:00 /usr/lib/ibus/ibus-x11 --kill-da
+cclab     1682  1509  0 Aug13 ?        00:00:04 /usr/lib/x86_64-linux-gnu/bamf/b
+cclab     1698  1641  0 Aug13 ?        00:00:06 /usr/lib/ibus/ibus-engine-simple
+cclab     1705  1509  0 Aug13 ?        00:00:00 gpg-agent --homedir /home/cclab/
+cclab     1715  1509  0 Aug13 ?        00:00:03 /usr/lib/x86_64-linux-gnu/hud/hu
+cclab     1717  1509  0 Aug13 ?        00:00:01 /usr/lib/unity-settings-daemon/u
+cclab     1731  1509  0 Aug13 ?        00:00:00 /usr/lib/at-spi2-core/at-spi-bus
+cclab     1732  1509  0 Aug13 ?        00:00:00 /usr/lib/gnome-session/gnome-ses
+cclab     1737  1509  0 Aug13 ?        00:00:05 /usr/lib/x86_64-linux-gnu/unity/
+cclab     1742  1731  0 Aug13 ?        00:00:00 /usr/bin/dbus-daemon --config-fi
+cclab     1753  1509  0 Aug13 ?        00:00:01 /usr/lib/at-spi2-core/at-spi2-re
+cclab     1758  1509  0 Aug13 ?        00:00:00 /usr/lib/x86_64-linux-gnu/indica
+cclab     1759  1509  0 Aug13 ?        00:00:00 /usr/lib/x86_64-linux-gnu/indica
+cclab     1760  1509  0 Aug13 ?        00:00:00 /usr/lib/x86_64-linux-gnu/indica
+cclab     1762  1509  0 Aug13 ?        00:00:00 /usr/lib/x86_64-linux-gnu/indica
+cclab     1766  1509  0 Aug13 ?        00:00:00 /usr/lib/x86_64-linux-gnu/indica
+cclab     1768  1509  0 Aug13 ?        00:00:00 /usr/lib/x86_64-linux-gnu/indica
+cclab     1777  1509  0 Aug13 ?        00:00:00 /usr/lib/x86_64-linux-gnu/indica
+cclab     1779  1509  0 Aug13 ?        00:00:00 /usr/lib/x86_64-linux-gnu/indica
+cclab     1781  1509  0 Aug13 ?        00:00:00 /usr/lib/x86_64-linux-gnu/indica
+cclab     1821  1509  0 Aug13 ?        00:00:00 /usr/bin/pulseaudio --start --lo
+cclab     1831  1509  0 Aug13 ?        00:00:00 /usr/lib/evolution/evolution-sou
+cclab     1858  1509  0 Aug13 ?        00:00:00 /usr/lib/dconf/dconf-service
+cclab     1873  1732  0 Aug13 ?        00:00:11 nautilus -n
+cclab     1874  1732  0 Aug13 ?        00:00:00 /usr/lib/policykit-1-gnome/polki
+cclab     1875  1732  0 Aug13 ?        00:00:04 /usr/bin/gnome-software --gappli
+cclab     1876  1732  0 Aug13 ?        00:00:00 nm-applet
+cclab     1878  1732  0 Aug13 ?        00:00:00 /usr/lib/unity-settings-daemon/u
+cclab     1899  1509  0 Aug13 ?        00:00:00 /usr/lib/evolution/evolution-cal
+cclab     1905  1509  0 Aug13 ?        00:00:00 /usr/lib/gvfs/gvfs-udisks2-volum
+root      1914     1  0 Aug13 ?        00:00:00 /usr/lib/udisks2/udisksd --no-de
+cclab     1922  1509  0 Aug13 ?        00:00:00 /usr/lib/gvfs/gvfs-goa-volume-mo
+cclab     1927  1509  0 Aug13 ?        00:00:00 /usr/lib/gvfs/gvfs-mtp-volume-mo
+cclab     1932  1509  0 Aug13 ?        00:00:00 /usr/lib/gvfs/gvfs-afc-volume-mo
+cclab     1938  1509  0 Aug13 ?        00:00:00 /usr/lib/gvfs/gvfs-gphoto2-volum
+cclab     1945  1509  0 Aug13 ?        00:02:29 compiz
+root      1954     1  0 Aug13 ?        00:00:00 /usr/lib/x86_64-linux-gnu/fwupd/
+cclab     1968  1509  0 Aug13 ?        00:00:00 /usr/lib/gvfs/gvfsd-trash --spaw
+cclab     1975  1899  0 Aug13 ?        00:00:00 /usr/lib/evolution/evolution-cal
+cclab     1985  1509  0 Aug13 ?        00:00:00 /usr/lib/evolution/evolution-add
+cclab     1987  1899  0 Aug13 ?        00:00:00 /usr/lib/evolution/evolution-cal
+cclab     1994  1985  0 Aug13 ?        00:00:00 /usr/lib/evolution/evolution-add
+cclab     2080  1732  0 Aug13 ?        00:00:01 zeitgeist-datahub
+cclab     2087  1509  0 Aug13 ?        00:00:00 /bin/sh -c /usr/lib/x86_64-linux
+cclab     2094  2087  0 Aug13 ?        00:00:00 /usr/bin/zeitgeist-daemon
+cclab     2101  1509  0 Aug13 ?        00:00:00 /usr/lib/x86_64-linux-gnu/zeitge
+cclab     2163  1732  0 Aug13 ?        00:00:00 update-notifier
+cclab     2206  1509  0 Aug13 ?        00:00:00 /usr/lib/gvfs/gvfsd-metadata
+cclab     2209  1732  0 Aug13 ?        00:00:00 /usr/lib/x86_64-linux-gnu/deja-d
+cclab     2307  1509  0 Aug13 ?        00:00:00 /usr/lib/x86_64-linux-gnu/notify
+root      2901     2  0 Aug13 ?        00:00:00 [kworker/1:0]
+root      3044     2  0 Aug13 ?        00:00:00 [kworker/2:3]
+cclab     4552  1509  0 Aug13 ?        00:00:00 /usr/lib/x86_64-linux-gnu/unity-
+cclab     4563  1509  0 Aug13 ?        00:00:00 /usr/bin/unity-scope-loader appl
+cclab     4565  1509  0 Aug13 ?        00:00:00 /usr/lib/x86_64-linux-gnu/unity-
+cclab     4610  1509  0 Aug13 ?        00:00:00 /usr/lib/gvfs/gvfsd-network --sp
+cclab     4637  1509  0 Aug13 ?        00:00:00 /usr/lib/gvfs/gvfsd-dnssd --spaw
+root      6653     2  0 Aug13 ?        00:00:00 [kworker/0:1]
+root      6771     2  0 Aug13 ?        00:00:00 [kworker/3:1]
+root      6777     2  0 Aug13 ?        00:00:00 [kworker/1:2]
+root      6860     2  0 Aug13 ?        00:00:00 [kworker/u12:5]
+root      6865     2  0 Aug13 ?        00:00:00 [kworker/u12:10]
+root      6874     2  0 07:53 ?        00:00:00 [kworker/u12:19]
+root      6917     2  0 07:53 ?        00:00:00 [irq/127-mei_me]
+root      6918     2  0 07:53 ?        00:00:00 [kworker/4:0]
+root      6920     2  0 07:53 ?        00:00:00 [kworker/0:2]
+root      8272     2  0 07:57 ?        00:00:00 [kworker/5:2]
+root      8273     2  0 07:57 ?        00:00:00 [kworker/5:4]
+root      8481     1  0 07:58 ?        00:00:00 /usr/sbin/cupsd -l
+root      8482     1  0 07:58 ?        00:00:00 /usr/sbin/cups-browsed
+lp        8484  8481  0 07:58 ?        00:00:00 /usr/lib/cups/notifier/dbus dbus
+root      8561     2  0 07:58 ?        00:00:00 [kworker/2:1]
+root      8603     2  0 08:00 ?        00:00:00 [kworker/4:1]
+cclab     8605  1509  0 08:00 ?        00:00:01 /usr/lib/gnome-terminal/gnome-te
+cclab     8612  8605  0 08:00 pts/2    00:00:00 bash
+root      8641     2  0 08:02 ?        00:00:00 [kworker/3:0]
+root      8667     2  0 08:06 ?        00:00:00 [kworker/4:2]
+root      8675     2  0 08:07 ?        00:00:00 [kworker/3:2]
+cclab     8676  8612  0 08:07 pts/2    00:00:00 ps -ef
+cclab@cclab-OptiPlex-3060:~$ top
+
+top - 08:08:34 up 18:07,  1 user,  load average: 0.08, 0.13, 0.16
+Tasks: 204 total,   2 running, 149 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.7 us,  0.2 sy,  0.0 ni, 99.1 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem :  7987416 total,  5652968 free,   665324 used,  1669124 buff/cache
+KiB Swap: 16413692 total, 16413692 free,        0 used.  6692176 avail Mem 
+
+  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND     
+ 1021 root      20   0  474712 116704  90496 S   3.0  1.5   2:21.05 Xorg        
+ 8605 cclab     20   0  664164  35184  28292 S   2.3  0.4   0:01.85 gnome-term+ 
+ 1945 cclab     20   0 1554168 195444  67380 S   1.0  2.4   2:29.57 compiz      
+ 1753 cclab     20   0  206864   4816   4344 S   0.3  0.1   0:01.17 at-spi2-re+ 
+ 1873 cclab     20   0  877564  55704  41092 S   0.3  0.7   0:11.56 nautilus    
+ 8679 cclab     20   0   41800   3728   3092 R   0.3  0.0   0:00.09 top         
+    1 root      20   0  185628   6180   3944 S   0.0  0.1   0:01.89 systemd     
+    2 root      20   0       0      0      0 S   0.0  0.0   0:00.01 kthreadd    
+    4 root       0 -20       0      0      0 I   0.0  0.0   0:00.00 kworker/0:+ 
+    6 root       0 -20       0      0      0 I   0.0  0.0   0:00.00 mm_percpu_+ 
+    7 root      20   0       0      0      0 S   0.0  0.0   0:00.02 ksoftirqd/0 
+    8 root      20   0       0      0      0 I   0.0  0.0   0:02.57 rcu_sched   
+    9 root      20   0       0      0      0 I   0.0  0.0   0:00.00 rcu_bh      
+   10 root      rt   0       0      0      0 S   0.0  0.0   0:00.01 migration/0 
+   11 root      rt   0       0      0      0 S   0.0  0.0   0:00.01 watchdog/0  
+   12 root      20   0       0      0      0 S   0.0  0.0   0:00.00 cpuhp/0     
+   13 root      20   0       0      0      0 S   0.0  0.0   0:00.00 cpuhp/1     
+cclab@cclab-OptiPlex-3060:~$ htop
+The program 'htop' is currently not installed. You can install it by typing:
+sudo apt install htop
+cclab@cclab-OptiPlex-3060:~$ sudo apt install htop
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  apt-clone archdetect-deb dmeventd dmraid gir1.2-clutter-1.0
+  gir1.2-clutter-gst-3.0 gir1.2-cogl-1.0 gir1.2-coglpango-1.0
+  gir1.2-gtkclutter-1.0 gir1.2-networkmanager-1.0 gir1.2-nma-1.0
+  gir1.2-timezonemap-1.0 gir1.2-xkl-1.0 kpartx kpartx-boot
+  libdebian-installer4 libdevmapper-event1.02.1 libdmraid1.0.0.rc16
+  liblvm2app2.2 liblvm2cmd2.02 libparted-fs-resize0 libreadline5
+  linux-signed-image-generic-hwe-16.04 linux-signed-image-oem lvm2 python3-icu
+  python3-pam rdate
+Use 'sudo apt autoremove' to remove them.
+The following NEW packages will be installed:
+  htop
+0 upgraded, 1 newly installed, 0 to remove and 255 not upgraded.
+Need to get 76.4 kB of archives.
+After this operation, 215 kB of additional disk space will be used.
+0% [Working]^C
+cclab@cclab-OptiPlex-3060:~$ man wc
+cclab@cclab-OptiPlex-3060:~$ echo "I am in BITS Pilani Hyderabad Campus">newfile.txt
+cclab@cclab-OptiPlex-3060:~$ wc newfile.txt
+ 1  7 37 newfile.txt
+cclab@cclab-OptiPlex-3060:~$ wc -l newfile.txt
+1 newfile.txt
+cclab@cclab-OptiPlex-3060:~$ wc -w newfile.txt
+7 newfile.txt
+cclab@cclab-OptiPlex-3060:~$ 
+cclab@cclab-OptiPlex-3060:~$ wc -c newfile.txt
+37 newfile.txt
+cclab@cclab-OptiPlex-3060:~$ BIOS -> BASIC INPUT OUTPUT SERVICES SYSTEMS
+BIOS: command not found
+cclab@cclab-OptiPlex-3060:~$ PXE booting
+PXE: command not found
+cclab@cclab-OptiPlex-3060:~$ grub -boot loader
+The program 'grub' is currently not installed. You can install it by typing:
+sudo apt install grub
+cclab@cclab-OptiPlex-3060:~$ cd /etc/default
+cclab@cclab-OptiPlex-3060:/etc/default$ ls
+acpid            console-setup  intel-microcode        rsyslog
+acpi-support     crda           irqbalance             saned
+alsa             cron           kerneloops             speech-dispatcher
+amd64-microcode  dbus           keyboard               ssh
+anacron          dell-eula      keyboard.pre-ubiquity  tpm2-resourcemgr
+apport           devpts         locale                 ufw
+avahi-daemon     google-chrome  networking             useradd
+brltty           grub           nss
+bsdmainutils     halt           rcS
+cacerts          im-config      rsync
+cclab@cclab-OptiPlex-3060:/etc/default$ gedit grub
+cclab@cclab-OptiPlex-3060:/etc/default$ sudo gedit grub
+
+** (gedit:8759): WARNING **: Set document metadata failed: Setting attribute metadata::gedit-position not supported
+cclab@cclab-OptiPlex-3060:/etc/default$ sudo gedit grub
+
+** (gedit:8778): WARNING **: Set document metadata failed: Setting attribute metadata::gedit-position not supported
+cclab@cclab-OptiPlex-3060:/etc/default$ sudo gedit grub
+
+** (gedit:8805): WARNING **: Set document metadata failed: Setting attribute metadata::gedit-position not supported
+cclab@cclab-OptiPlex-3060:/etc/default$ cd ~
+cclab@cclab-OptiPlex-3060:~$ ls -al
+total 208
+drwxr-xr-x 20 cclab cclab  4096 Aug 14 08:19 .
+drwxr-xr-x  3 root  root   4096 Mar 27 19:32 ..
+drwxrwxr-x  2 cclab cclab  4096 Aug 13 15:48 0242
+-rw-rw-r--  1 cclab cclab    54 Aug  7 11:57 abc.txt
+-rw-rw-r--  1 cclab cclab   176 Aug  7 15:01 A.class
+-rw-rw-r--  1 cclab cclab    22 Aug  7 15:01 A.java
+-rw-------  1 cclab cclab  4477 Aug 14 07:59 .bash_history
+-rw-r--r--  1 cclab cclab   220 Mar 27 19:28 .bash_logout
+-rw-r--r--  1 cclab cclab  3771 Mar 27 19:28 .bashrc
+-rw-rw-r--  1 cclab cclab     0 Aug 14 08:13 BASIC
+-rw-rw-r--  1 cclab cclab   176 Aug  7 15:01 B.class
+drwx------ 16 cclab cclab  4096 Aug 14 08:19 .cache
+drwx------  3 cclab cclab  4096 Mar 27 19:35 .compiz
+drwxr-xr-x 23 cclab cclab  4096 Aug 13 15:00 .config
+drwx------  3 root  root   4096 Aug 14 08:19 .dbus
+drwxr-xr-x  2 cclab cclab  4096 Aug  8 15:50 Desktop
+-rw-r--r--  1 cclab cclab    25 Mar 27 19:34 .dmrc
+drwxr-xr-x  2 cclab cclab  4096 Aug  2 14:57 Documents
+drwxr-xr-x  2 cclab cclab  4096 Aug 10 14:19 Downloads
+-rw-r--r--  1 cclab cclab  8980 Mar 27 19:28 examples.desktop
+-rw-------  1 cclab cclab 12288 Aug  7 08:25 .file.swp
+-rw-rw-r--  1 cclab cclab   967 Aug  7 15:52 firstProg.class
+-rw-rw-r--  1 cclab cclab   545 Aug  7 15:52 firstProg.java
+drwx------  2 cclab cclab  4096 Jul 11 15:35 .gconf
+drwx------  3 cclab cclab  4096 Jul 22 10:47 .gnome
+drwx------  3 cclab cclab  4096 Aug 13 14:01 .gnupg
+-rw-------  1 cclab cclab  5180 Aug 13 14:01 .ICEauthority
+-rw-rw-r--  1 cclab cclab   224 Aug  9 11:54 j1.asm
+-rw-rw-r--  1 cclab cclab   518 Aug  9 12:47 j2.asm
+-rw-rw-r--  1 cclab cclab   462 Aug  9 12:47 j2.c
+-rw-rw-r--  1 cclab cclab    63 Aug  9 12:49 j3.asm
+-rw-rw-r--  1 cclab cclab    78 Aug  9 11:33 j.asm
+drwx------  3 cclab cclab  4096 Mar 27 19:34 .local
+-rw-rw-r--  1 cclab cclab   474 Aug 10 15:56 mips1.3.asm
+-rw-rw-r--  1 cclab cclab   171 Aug 10 15:25 mips1.asm
+drwxr-xr-x  2 cclab cclab  4096 Mar 27 19:34 Music
+-rw-rw-r--  1 cclab cclab    37 Aug 14 08:10 newfile.txt
+-rw-rw-r--  1 cclab cclab     7 Aug  7 08:45 null
+drwxr-xr-x  2 cclab cclab  4096 Mar 27 19:34 Pictures
+drwx------  3 cclab cclab  4096 Jul 22 10:47 .pki
+-rw-r--r--  1 cclab cclab   655 Mar 27 19:28 .profile
+drwxr-xr-x  2 cclab cclab  4096 Mar 27 19:34 Public
+-rw-r--r--  1 cclab cclab     0 Jul 11 15:36 .sudo_as_admin_successful
+drwxr-xr-x  2 cclab cclab  4096 Mar 27 19:34 Templates
+drwxr-xr-x  2 cclab cclab  4096 Mar 27 19:34 Videos
+-rw-------  1 cclab cclab   128 Aug 13 14:01 .Xauthority
+-rw-------  1 cclab cclab    82 Aug 13 14:01 .xsession-errors
+-rw-------  1 cclab cclab  1242 Aug 10 22:07 .xsession-errors.old
+cclab@cclab-OptiPlex-3060:~$ beginning with'd' is directory else not a  directory
+beginning: command not found
+cclab@cclab-OptiPlex-3060:~$ x->execute
+x-: command not found
+cclab@cclab-OptiPlex-3060:~$ chmaod +x newfile.txt
+No command 'chmaod' found, did you mean:
+ Command 'chmod' from package 'coreutils' (main)
+chmaod: command not found
+cclab@cclab-OptiPlex-3060:~$ chmod +x newfile.txt
+cclab@cclab-OptiPlex-3060:~$ ls -al
+total 208
+drwxr-xr-x 20 cclab cclab  4096 Aug 14 08:27 .
+drwxr-xr-x  3 root  root   4096 Mar 27 19:32 ..
+drwxrwxr-x  2 cclab cclab  4096 Aug 13 15:48 0242
+-rw-rw-r--  1 cclab cclab    54 Aug  7 11:57 abc.txt
+-rw-rw-r--  1 cclab cclab   176 Aug  7 15:01 A.class
+-rw-rw-r--  1 cclab cclab    22 Aug  7 15:01 A.java
+-rw-------  1 cclab cclab  4477 Aug 14 07:59 .bash_history
+-rw-r--r--  1 cclab cclab   220 Mar 27 19:28 .bash_logout
+-rw-r--r--  1 cclab cclab  3771 Mar 27 19:28 .bashrc
+-rw-rw-r--  1 cclab cclab     0 Aug 14 08:13 BASIC
+-rw-rw-r--  1 cclab cclab   176 Aug  7 15:01 B.class
+drwx------ 16 cclab cclab  4096 Aug 14 08:19 .cache
+drwx------  3 cclab cclab  4096 Mar 27 19:35 .compiz
+drwxr-xr-x 23 cclab cclab  4096 Aug 13 15:00 .config
+drwx------  3 root  root   4096 Aug 14 08:19 .dbus
+drwxr-xr-x  2 cclab cclab  4096 Aug  8 15:50 Desktop
+-rw-r--r--  1 cclab cclab    25 Mar 27 19:34 .dmrc
+drwxr-xr-x  2 cclab cclab  4096 Aug  2 14:57 Documents
+drwxr-xr-x  2 cclab cclab  4096 Aug 10 14:19 Downloads
+-rw-r--r--  1 cclab cclab  8980 Mar 27 19:28 examples.desktop
+-rw-rw-r--  1 cclab cclab     0 Aug 14 08:27 execute
+-rw-------  1 cclab cclab 12288 Aug  7 08:25 .file.swp
+-rw-rw-r--  1 cclab cclab   967 Aug  7 15:52 firstProg.class
+-rw-rw-r--  1 cclab cclab   545 Aug  7 15:52 firstProg.java
+drwx------  2 cclab cclab  4096 Jul 11 15:35 .gconf
+drwx------  3 cclab cclab  4096 Jul 22 10:47 .gnome
+drwx------  3 cclab cclab  4096 Aug 13 14:01 .gnupg
+-rw-------  1 cclab cclab  5180 Aug 13 14:01 .ICEauthority
+-rw-rw-r--  1 cclab cclab   224 Aug  9 11:54 j1.asm
+-rw-rw-r--  1 cclab cclab   518 Aug  9 12:47 j2.asm
+-rw-rw-r--  1 cclab cclab   462 Aug  9 12:47 j2.c
+-rw-rw-r--  1 cclab cclab    63 Aug  9 12:49 j3.asm
+-rw-rw-r--  1 cclab cclab    78 Aug  9 11:33 j.asm
+drwx------  3 cclab cclab  4096 Mar 27 19:34 .local
+-rw-rw-r--  1 cclab cclab   474 Aug 10 15:56 mips1.3.asm
+-rw-rw-r--  1 cclab cclab   171 Aug 10 15:25 mips1.asm
+drwxr-xr-x  2 cclab cclab  4096 Mar 27 19:34 Music
+-rwxrwxr-x  1 cclab cclab    37 Aug 14 08:10 newfile.txt
+-rw-rw-r--  1 cclab cclab     7 Aug  7 08:45 null
+drwxr-xr-x  2 cclab cclab  4096 Mar 27 19:34 Pictures
+drwx------  3 cclab cclab  4096 Jul 22 10:47 .pki
+-rw-r--r--  1 cclab cclab   655 Mar 27 19:28 .profile
+drwxr-xr-x  2 cclab cclab  4096 Mar 27 19:34 Public
+-rw-r--r--  1 cclab cclab     0 Jul 11 15:36 .sudo_as_admin_successful
+drwxr-xr-x  2 cclab cclab  4096 Mar 27 19:34 Templates
+drwxr-xr-x  2 cclab cclab  4096 Mar 27 19:34 Videos
+-rw-------  1 cclab cclab   128 Aug 13 14:01 .Xauthority
+-rw-------  1 cclab cclab    82 Aug 13 14:01 .xsession-errors
+-rw-------  1 cclab cclab  1242 Aug 10 22:07 .xsession-errors.old
+cclab@cclab-OptiPlex-3060:~$ chmod x newfile.txt
+chmod: invalid mode: ‘x’
+Try 'chmod --help' for more information.
+cclab@cclab-OptiPlex-3060:~$ chmod -x newfile.txt
+cclab@cclab-OptiPlex-3060:~$ ls -al
+total 208
+drwxr-xr-x 20 cclab cclab  4096 Aug 14 08:27 .
+drwxr-xr-x  3 root  root   4096 Mar 27 19:32 ..
+drwxrwxr-x  2 cclab cclab  4096 Aug 13 15:48 0242
+-rw-rw-r--  1 cclab cclab    54 Aug  7 11:57 abc.txt
+-rw-rw-r--  1 cclab cclab   176 Aug  7 15:01 A.class
+-rw-rw-r--  1 cclab cclab    22 Aug  7 15:01 A.java
+-rw-------  1 cclab cclab  4477 Aug 14 07:59 .bash_history
+-rw-r--r--  1 cclab cclab   220 Mar 27 19:28 .bash_logout
+-rw-r--r--  1 cclab cclab  3771 Mar 27 19:28 .bashrc
+-rw-rw-r--  1 cclab cclab     0 Aug 14 08:13 BASIC
+-rw-rw-r--  1 cclab cclab   176 Aug  7 15:01 B.class
+drwx------ 16 cclab cclab  4096 Aug 14 08:19 .cache
+drwx------  3 cclab cclab  4096 Mar 27 19:35 .compiz
+drwxr-xr-x 23 cclab cclab  4096 Aug 13 15:00 .config
+drwx------  3 root  root   4096 Aug 14 08:19 .dbus
+drwxr-xr-x  2 cclab cclab  4096 Aug  8 15:50 Desktop
+-rw-r--r--  1 cclab cclab    25 Mar 27 19:34 .dmrc
+drwxr-xr-x  2 cclab cclab  4096 Aug  2 14:57 Documents
+drwxr-xr-x  2 cclab cclab  4096 Aug 10 14:19 Downloads
+-rw-r--r--  1 cclab cclab  8980 Mar 27 19:28 examples.desktop
+-rw-rw-r--  1 cclab cclab     0 Aug 14 08:27 execute
+-rw-------  1 cclab cclab 12288 Aug  7 08:25 .file.swp
+-rw-rw-r--  1 cclab cclab   967 Aug  7 15:52 firstProg.class
+-rw-rw-r--  1 cclab cclab   545 Aug  7 15:52 firstProg.java
+drwx------  2 cclab cclab  4096 Jul 11 15:35 .gconf
+drwx------  3 cclab cclab  4096 Jul 22 10:47 .gnome
+drwx------  3 cclab cclab  4096 Aug 13 14:01 .gnupg
+-rw-------  1 cclab cclab  5180 Aug 13 14:01 .ICEauthority
+-rw-rw-r--  1 cclab cclab   224 Aug  9 11:54 j1.asm
+-rw-rw-r--  1 cclab cclab   518 Aug  9 12:47 j2.asm
+-rw-rw-r--  1 cclab cclab   462 Aug  9 12:47 j2.c
+-rw-rw-r--  1 cclab cclab    63 Aug  9 12:49 j3.asm
+-rw-rw-r--  1 cclab cclab    78 Aug  9 11:33 j.asm
+drwx------  3 cclab cclab  4096 Mar 27 19:34 .local
+-rw-rw-r--  1 cclab cclab   474 Aug 10 15:56 mips1.3.asm
+-rw-rw-r--  1 cclab cclab   171 Aug 10 15:25 mips1.asm
+drwxr-xr-x  2 cclab cclab  4096 Mar 27 19:34 Music
+-rw-rw-r--  1 cclab cclab    37 Aug 14 08:10 newfile.txt
+-rw-rw-r--  1 cclab cclab     7 Aug  7 08:45 null
+drwxr-xr-x  2 cclab cclab  4096 Mar 27 19:34 Pictures
+drwx------  3 cclab cclab  4096 Jul 22 10:47 .pki
+-rw-r--r--  1 cclab cclab   655 Mar 27 19:28 .profile
+drwxr-xr-x  2 cclab cclab  4096 Mar 27 19:34 Public
+-rw-r--r--  1 cclab cclab     0 Jul 11 15:36 .sudo_as_admin_successful
+drwxr-xr-x  2 cclab cclab  4096 Mar 27 19:34 Templates
+drwxr-xr-x  2 cclab cclab  4096 Mar 27 19:34 Videos
+-rw-------  1 cclab cclab   128 Aug 13 14:01 .Xauthority
+-rw-------  1 cclab cclab    82 Aug 13 14:01 .xsession-errors
+-rw-------  1 cclab cclab  1242 Aug 10 22:07 .xsession-errors.old
+cclab@cclab-OptiPlex-3060:~$ chmod 764 newfile.txt
+cclab@cclab-OptiPlex-3060:~$ ls -al
+total 208
+drwxr-xr-x 20 cclab cclab  4096 Aug 14 08:27 .
+drwxr-xr-x  3 root  root   4096 Mar 27 19:32 ..
+drwxrwxr-x  2 cclab cclab  4096 Aug 13 15:48 0242
+-rw-rw-r--  1 cclab cclab    54 Aug  7 11:57 abc.txt
+-rw-rw-r--  1 cclab cclab   176 Aug  7 15:01 A.class
+-rw-rw-r--  1 cclab cclab    22 Aug  7 15:01 A.java
+-rw-------  1 cclab cclab  4477 Aug 14 07:59 .bash_history
+-rw-r--r--  1 cclab cclab   220 Mar 27 19:28 .bash_logout
+-rw-r--r--  1 cclab cclab  3771 Mar 27 19:28 .bashrc
+-rw-rw-r--  1 cclab cclab     0 Aug 14 08:13 BASIC
+-rw-rw-r--  1 cclab cclab   176 Aug  7 15:01 B.class
+drwx------ 16 cclab cclab  4096 Aug 14 08:19 .cache
+drwx------  3 cclab cclab  4096 Mar 27 19:35 .compiz
+drwxr-xr-x 23 cclab cclab  4096 Aug 13 15:00 .config
+drwx------  3 root  root   4096 Aug 14 08:19 .dbus
+drwxr-xr-x  2 cclab cclab  4096 Aug  8 15:50 Desktop
+-rw-r--r--  1 cclab cclab    25 Mar 27 19:34 .dmrc
+drwxr-xr-x  2 cclab cclab  4096 Aug  2 14:57 Documents
+drwxr-xr-x  2 cclab cclab  4096 Aug 10 14:19 Downloads
+-rw-r--r--  1 cclab cclab  8980 Mar 27 19:28 examples.desktop
+-rw-rw-r--  1 cclab cclab     0 Aug 14 08:27 execute
+-rw-------  1 cclab cclab 12288 Aug  7 08:25 .file.swp
+-rw-rw-r--  1 cclab cclab   967 Aug  7 15:52 firstProg.class
+-rw-rw-r--  1 cclab cclab   545 Aug  7 15:52 firstProg.java
+drwx------  2 cclab cclab  4096 Jul 11 15:35 .gconf
+drwx------  3 cclab cclab  4096 Jul 22 10:47 .gnome
+drwx------  3 cclab cclab  4096 Aug 13 14:01 .gnupg
+-rw-------  1 cclab cclab  5180 Aug 13 14:01 .ICEauthority
+-rw-rw-r--  1 cclab cclab   224 Aug  9 11:54 j1.asm
+-rw-rw-r--  1 cclab cclab   518 Aug  9 12:47 j2.asm
+-rw-rw-r--  1 cclab cclab   462 Aug  9 12:47 j2.c
+-rw-rw-r--  1 cclab cclab    63 Aug  9 12:49 j3.asm
+-rw-rw-r--  1 cclab cclab    78 Aug  9 11:33 j.asm
+drwx------  3 cclab cclab  4096 Mar 27 19:34 .local
+-rw-rw-r--  1 cclab cclab   474 Aug 10 15:56 mips1.3.asm
+-rw-rw-r--  1 cclab cclab   171 Aug 10 15:25 mips1.asm
+drwxr-xr-x  2 cclab cclab  4096 Mar 27 19:34 Music
+-rwxrw-r--  1 cclab cclab    37 Aug 14 08:10 newfile.txt
+-rw-rw-r--  1 cclab cclab     7 Aug  7 08:45 null
+drwxr-xr-x  2 cclab cclab  4096 Mar 27 19:34 Pictures
+drwx------  3 cclab cclab  4096 Jul 22 10:47 .pki
+-rw-r--r--  1 cclab cclab   655 Mar 27 19:28 .profile
+drwxr-xr-x  2 cclab cclab  4096 Mar 27 19:34 Public
+-rw-r--r--  1 cclab cclab     0 Jul 11 15:36 .sudo_as_admin_successful
+drwxr-xr-x  2 cclab cclab  4096 Mar 27 19:34 Templates
+drwxr-xr-x  2 cclab cclab  4096 Mar 27 19:34 Videos
+-rw-------  1 cclab cclab   128 Aug 13 14:01 .Xauthority
+-rw-------  1 cclab cclab    82 Aug 13 14:01 .xsession-errors
+-rw-------  1 cclab cclab  1242 Aug 10 22:07 .xsession-errors.old
+cclab@cclab-OptiPlex-3060:~$ man chmod
+cclab@cclab-OptiPlex-3060:~$ cat newfile.ttx
+cat: newfile.ttx: No such file or directory
+cclab@cclab-OptiPlex-3060:~$ cat newfile.txt
+I am in BITS Pilani Hyderabad Campus
+cclab@cclab-OptiPlex-3060:~$ echo "I am in Hyderabad">file2.txt
+cclab@cclab-OptiPlex-3060:~$ echo file2.txt
+file2.txt
+cclab@cclab-OptiPlex-3060:~$ cat file2.txt
+I am in Hyderabad
+cclab@cclab-OptiPlex-3060:~$ diff newfile.txt file2.txt
+1c1
+< I am in BITS Pilani Hyderabad Campus
+---
+> I am in Hyderabad
+cclab@cclab-OptiPlex-3060:~$ man diff
+cclab@cclab-OptiPlex-3060:~$ service ssh status
+● ssh.service - OpenBSD Secure Shell server
+   Loaded: loaded (/lib/systemd/system/ssh.service; enabled; vendor preset: enab
+   Active: active (running) since Tue 2019-08-13 14:01:15 IST; 18h ago
+  Process: 7480 ExecReload=/bin/kill -HUP $MAINPID (code=exited, status=0/SUCCES
+  Process: 7474 ExecReload=/usr/sbin/sshd -t (code=exited, status=0/SUCCESS)
+  Process: 1012 ExecStartPre=/usr/sbin/sshd -t (code=exited, status=0/SUCCESS)
+ Main PID: 1038 (sshd)
+   CGroup: /system.slice/ssh.service
+           └─1038 /usr/sbin/sshd -D
+
+Aug 14 07:54:02 cclab-OptiPlex-3060 systemd[1]: Reloading OpenBSD Secure Shell s
+Aug 14 07:54:02 cclab-OptiPlex-3060 sshd[1038]: Received SIGHUP; restarting.
+Aug 14 07:54:02 cclab-OptiPlex-3060 systemd[1]: Reloaded OpenBSD Secure Shell se
+Aug 14 07:54:02 cclab-OptiPlex-3060 sshd[1038]: Server listening on 0.0.0.0 port
+Aug 14 07:54:02 cclab-OptiPlex-3060 sshd[1038]: Server listening on :: port 22.
+Aug 14 07:54:12 cclab-OptiPlex-3060 systemd[1]: Reloading OpenBSD Secure Shell s
+Aug 14 07:54:12 cclab-OptiPlex-3060 sshd[1038]: Received SIGHUP; restarting.
+Aug 14 07:54:12 cclab-OptiPlex-3060 systemd[1]: Reloaded OpenBSD Secure Shell se
+Aug 14 07:54:12 cclab-OptiPlex-3060 sshd[1038]: Server listening on 0.0.0.0 port
+Aug 14 07:54:12 cclab-OptiPlex-3060 sshd[1038]: Server listening on :: port 22.
+
+cclab@cclab-OptiPlex-3060:~$ service ssh start
+Failed to start ssh.service: Access denied
+See system logs and 'systemctl status ssh.service' for details.
+cclab@cclab-OptiPlex-3060:~$ sudo service ssh start
+[sudo] password for cclab: 
+cclab@cclab-OptiPlex-3060:~$ service ssh status
+● ssh.service - OpenBSD Secure Shell server
+   Loaded: loaded (/lib/systemd/system/ssh.service; enabled; vendor preset: enab
+   Active: active (running) since Tue 2019-08-13 14:01:15 IST; 18h ago
+  Process: 7480 ExecReload=/bin/kill -HUP $MAINPID (code=exited, status=0/SUCCES
+  Process: 7474 ExecReload=/usr/sbin/sshd -t (code=exited, status=0/SUCCESS)
+  Process: 1012 ExecStartPre=/usr/sbin/sshd -t (code=exited, status=0/SUCCESS)
+ Main PID: 1038 (sshd)
+   CGroup: /system.slice/ssh.service
+           └─1038 /usr/sbin/sshd -D
+
+Aug 14 07:54:02 cclab-OptiPlex-3060 sshd[1038]: Received SIGHUP; restarting.
+Aug 14 07:54:02 cclab-OptiPlex-3060 systemd[1]: Reloaded OpenBSD Secure Shell se
+Aug 14 07:54:02 cclab-OptiPlex-3060 sshd[1038]: Server listening on 0.0.0.0 port
+Aug 14 07:54:02 cclab-OptiPlex-3060 sshd[1038]: Server listening on :: port 22.
+Aug 14 07:54:12 cclab-OptiPlex-3060 systemd[1]: Reloading OpenBSD Secure Shell s
+Aug 14 07:54:12 cclab-OptiPlex-3060 sshd[1038]: Received SIGHUP; restarting.
+Aug 14 07:54:12 cclab-OptiPlex-3060 systemd[1]: Reloaded OpenBSD Secure Shell se
+Aug 14 07:54:12 cclab-OptiPlex-3060 sshd[1038]: Server listening on 0.0.0.0 port
+Aug 14 07:54:12 cclab-OptiPlex-3060 sshd[1038]: Server listening on :: port 22.
+Aug 14 08:38:42 cclab-OptiPlex-3060 systemd[1]: Started OpenBSD Secure Shell ser
+
+cclab@cclab-OptiPlex-3060:~$ ifconfig
+enp1s0    Link encap:Ethernet  HWaddr 6c:2b:59:d4:0e:52  
+          inet addr:172.16.4.166  Bcast:172.16.4.255  Mask:255.255.255.128
+          inet6 addr: fe80::901e:bb1d:893e:9ad1/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:19868 errors:0 dropped:213 overruns:0 frame:0
+          TX packets:10845 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:11306802 (11.3 MB)  TX bytes:1000962 (1.0 MB)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:5595 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:5595 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:365573 (365.5 KB)  TX bytes:365573 (365.5 KB)
+
+cclab@cclab-OptiPlex-3060:~$ scp newfile.txt cclab@172.16.4.167
+cclab@cclab-OptiPlex-3060:~$ scp newfile.txt cclab@172.16.4.167:
+The authenticity of host '172.16.4.167 (172.16.4.167)' can't be established.
+ECDSA key fingerprint is SHA256:4J7LLvZ1sLCAAE4z5r/jgWEQOFnk3CQOAvqk0gSV0Pc.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '172.16.4.167' (ECDSA) to the list of known hosts.
+cclab@172.16.4.167's password: 
+newfile.txt                                   100%   54     0.1KB/s   00:00    
+cclab@cclab-OptiPlex-3060:~$ ssh cclab@172.16.4.165
+The authenticity of host '172.16.4.165 (172.16.4.165)' can't be established.
+ECDSA key fingerprint is SHA256:xfqEZAkMNwUPjSzbop1SnxDS4HjHTYn7kHjMABpFOII.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '172.16.4.165' (ECDSA) to the list of known hosts.
+cclab@172.16.4.165's password: 
+Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.15.0-55-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+255 packages can be updated.
+0 updates are security updates.
+
+Last login: Thu Jul 11 15:53:52 2019 from 172.16.4.200
+cclab@cclab-OptiPlex-3060:~$ exit
+logout
+Connection to 172.16.4.165 closed.
+
+
+
+
+
+
+
+cclab@cclab-OptiPlex-3060:~$ lsb_release -i -s
+Ubuntu
+cclab@cclab-OptiPlex-3060:~$ lsb_release
+No LSB modules are available.
+cclab@cclab-OptiPlex-3060:~$ lsb_release -i
+Distributor ID:	Ubuntu
+cclab@cclab-OptiPlex-3060:~$ ls -al
+total 208
+drwxr-xr-x 20 cclab cclab  4096 Aug 14 08:19 .
+drwxr-xr-x  3 root  root   4096 Mar 27 19:32 ..
+drwxrwxr-x  2 cclab cclab  4096 Aug 13 15:48 0242
+-rw-rw-r--  1 cclab cclab    54 Aug  7 11:57 abc.txt
+-rw-rw-r--  1 cclab cclab   176 Aug  7 15:01 A.class
+-rw-rw-r--  1 cclab cclab    22 Aug  7 15:01 A.java
+-rw-------  1 cclab cclab  4477 Aug 14 07:59 .bash_history
+-rw-r--r--  1 cclab cclab   220 Mar 27 19:28 .bash_logout
+-rw-r--r--  1 cclab cclab  3771 Mar 27 19:28 .bashrc
+-rw-rw-r--  1 cclab cclab     0 Aug 14 08:13 BASIC
+-rw-rw-r--  1 cclab cclab   176 Aug  7 15:01 B.class
+drwx------ 16 cclab cclab  4096 Aug 14 08:19 .cache
+drwx------  3 cclab cclab  4096 Mar 27 19:35 .compiz
+drwxr-xr-x 23 cclab cclab  4096 Aug 13 15:00 .config
+drwx------  3 root  root   4096 Aug 14 08:19 .dbus
+drwxr-xr-x  2 cclab cclab  4096 Aug  8 15:50 Desktop
+-rw-r--r--  1 cclab cclab    25 Mar 27 19:34 .dmrc
+drwxr-xr-x  2 cclab cclab  4096 Aug  2 14:57 Documents
+drwxr-xr-x  2 cclab cclab  4096 Aug 10 14:19 Downloads
+-rw-r--r--  1 cclab cclab  8980 Mar 27 19:28 examples.desktop
+-rw-------  1 cclab cclab 12288 Aug  7 08:25 .file.swp
+-rw-rw-r--  1 cclab cclab   967 Aug  7 15:52 firstProg.class
+-rw-rw-r--  1 cclab cclab   545 Aug  7 15:52 firstProg.java
+drwx------  2 cclab cclab  4096 Jul 11 15:35 .gconf
+drwx------  3 cclab cclab  4096 Jul 22 10:47 .gnome
+drwx------  3 cclab cclab  4096 Aug 13 14:01 .gnupg
+-rw-------  1 cclab cclab  5180 Aug 13 14:01 .ICEauthority
+-rw-rw-r--  1 cclab cclab   224 Aug  9 11:54 j1.asm
+-rw-rw-r--  1 cclab cclab   518 Aug  9 12:47 j2.asm
+-rw-rw-r--  1 cclab cclab   462 Aug  9 12:47 j2.c
+-rw-rw-r--  1 cclab cclab    63 Aug  9 12:49 j3.asm
+-rw-rw-r--  1 cclab cclab    78 Aug  9 11:33 j.asm
+drwx------  3 cclab cclab  4096 Mar 27 19:34 .local
+-rw-rw-r--  1 cclab cclab   474 Aug 10 15:56 mips1.3.asm
+-rw-rw-r--  1 cclab cclab   171 Aug 10 15:25 mips1.asm
+drwxr-xr-x  2 cclab cclab  4096 Mar 27 19:34 Music
+-rw-rw-r--  1 cclab cclab    37 Aug 14 08:10 newfile.txt
+-rw-rw-r--  1 cclab cclab     7 Aug  7 08:45 null
+drwxr-xr-x  2 cclab cclab  4096 Mar 27 19:34 Pictures
+drwx------  3 cclab cclab  4096 Jul 22 10:47 .pki
+-rw-r--r--  1 cclab cclab   655 Mar 27 19:28 .profile
+drwxr-xr-x  2 cclab cclab  4096 Mar 27 19:34 Public
+-rw-r--r--  1 cclab cclab     0 Jul 11 15:36 .sudo_as_admin_successful
+drwxr-xr-x  2 cclab cclab  4096 Mar 27 19:34 Templates
+drwxr-xr-x  2 cclab cclab  4096 Mar 27 19:34 Videos
+-rw-------  1 cclab cclab   128 Aug 13 14:01 .Xauthority
+-rw-------  1 cclab cclab    82 Aug 13 14:01 .xsession-errors
+-rw-------  1 cclab cclab  1242 Aug 10 22:07 .xsession-errors.old
+
+
